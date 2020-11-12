@@ -39,13 +39,45 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
+    Probamos la función recién hecha, y obtenemos el siguiente tiempo.
+    
+    ![](images/time1.PNG)
+    
+    Una vez corremos las peticiones varias veces, el tiempo mejora de la siguiente manera.
+    
+    ![](images/time2.PNG)
+    
+    Vemos una mejora del 56% en tiempo, junto con la misma confiabilidad en peticiones de 100%, por lo que memoization nos permite optimizar ambas cosas.
+
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+
+    Azure function es una herramienta basada en eventos
+    Le permite a los desarrolladores crear puntos de
+    mensajería como por ejemplo peticiones http en un endpoint.
+    
 * ¿Qué es serverless?
+    
+    Se trata de un modelo se ejecución con servicios en la nube, 
+    donde el proveedor se encarga de ejecutar el código 
+    suministrado, manejando recursos de manera dinámica, por lo
+    que el cobro se basa en estos recursos.
+
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+
+    Consiste en varias funcionalidades que nos permiten vigilar
+    y hacer manejo de recursos de functions en tiempo real entre otros dispositivos.
+    Nos permite además hacer preview de nuestro código antes de 
+    hacer commit en este, por lo que nos permite testear y ver el estado
+    de las builds. Monitorea el uso y potencia de los procesos que estamos corriendo.
+
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+
+    Storage account es un mecanismo de persistencia de alto rendimiento,
+    y es necesario dado que functions lo usa para hacer manejo de disparadores y logging.
+
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
 * ¿Por qué la memoization falla o no funciona de forma correcta?
 * ¿Cómo funciona el sistema de facturación de las Function App?
-* Informe
+* Informe -> [INFORME](informe.md)
