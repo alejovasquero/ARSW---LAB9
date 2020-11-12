@@ -45,7 +45,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 * ¿Qué es serverless?
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
-* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencian?, mencione ventajas y desventajas de cada uno de ellos.
+
+Consumption (Serverless)
+Son manejadas dinamicamente, lo cual escala automaticamente, se cargan los recursos para poder computar mientras se ejecuten las funciones. Puede ser una buena opcion para pagos solo por ejecucion, ademas de que escala automaticamente durante periodos de alta demanda.
+
+Premium plan
+Aborda las mismas caracteristicas que el plan de consumo, pero en este plan se agregan mas funcionalidades que se pueden aprovechar, como el manejo en una VNET, predecir los costes y consumos, alta disponibilidad para varias Function apps e instanciar mejor estas.
+Esta opcion es mas viable cuando se tiene un uso mas constante de las funciones, ademas de su capacidad. Ademas se permite usar la VNET para que las funciones se comuniquen.
+
+Dedicated
+Puede usar una VM para que corra mas funciones, ademas de que quiera personalizar las funciones con respecto a su ejecucion, puede autoescalar y aisla las funciones que maneja.
+
+
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+  
+Los valores que ingresan son demasiado grandes y solo funciona hasta 1476, por lo que es problematico ingresar un valor mas grande cuando intenta mirar las posiciones del arreglo que se esta usando para memorizar. Adicionalmente no hay mucha capacidad para este procesamiento.
+
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
+Mientras las Function App esten corriendo, unicamente se paga por el consumo que estas generen, de manera que actuan dinamicamente segun la cantidad de eventos ingresen en estas. Se cobra por el numero de ejecuciones, tiempo de ejecucion y memoria usada.
+
+Por otro lado, Azure ofrece la capacidad de pagar por mas planes para operaciones mas robustas y pueda llevarse un mejor control de costos y predecirlos para un posible escalamiento.
 * Informe
